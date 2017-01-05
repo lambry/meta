@@ -4,15 +4,15 @@
 
 add_action('acf/init', function() {
 
-  define('META_FIELDS', 'fieldss');
+    define('META_FIELDS', 'fields');
 
-	require 'Meta.php';
+    require 'Meta.php';
 
-	Meta::box('Author Options')->fields('Author')->on('authors')->register();
+    Meta::box('Author Options')->fields('Author')->on('author')->register();
 
-	Meta::box('Flexible Modules')->flex(['Image', 'Text'])->on(['post', 'page'])->register();
+    Meta::box('Flexible Modules')->flex(['Image', 'Text'])->on(['post', 'page'])->register();
 
-	Meta::box('Header')->fields('Slider')->on('page')->register();
+    Meta::box('Header')->fields('Slider')->on('page')->register();
 
 });
 
